@@ -86,8 +86,8 @@ if __name__ == "__main__":
         raise FileNotFoundError(f"Input file {args.input} does not exist.")
     if os.path.isdir(args.input):
         paths = (
-            glob.glob(os.path.join(args.input, "*.jsonl"))
-            + glob.glob(os.path.join(args.input, "*.jsonl.gz"))
+            glob.glob(os.path.join(args.input, "*.jsonl.gz"))
+            + glob.glob(os.path.join(args.input, "*.json.gz"))
         )
     else:
         paths = [args.input]
